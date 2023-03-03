@@ -36,7 +36,7 @@ const RC4 = () => {
           style={{
             position: "fixed",
             width: "100vw",
-            touchAction: "none",
+            touchAction: "auto",
             left: "0",
             top: "0",
           }}
