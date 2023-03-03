@@ -39,7 +39,6 @@ const RC4 = () => {
             touchAction: "auto",
             left: "0",
             top: "0",
-            zIndex: "10000",
           }}
           playsInline
         >
