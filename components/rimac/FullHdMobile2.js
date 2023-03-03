@@ -20,7 +20,7 @@ const RC4 = () => {
   }, [reachedBottom]);
 
   return (
-    <div style={{ height: "1820vh", position: "relative" }}>
+    <div style={{ height: "1820vh", position: "relative", zIndex: "10000" }}>
       <VideoScroll
         onLoad={(props) =>
           setStyles(props.wrapperEl, props.videoEl, props.playbackRate)
@@ -39,6 +39,7 @@ const RC4 = () => {
             touchAction: "auto",
             left: "0",
             top: "0",
+            zIndex: "10000",
           }}
           playsInline
         >
