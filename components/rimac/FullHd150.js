@@ -20,7 +20,7 @@ const RC4 = () => {
   }, [reachedBottom]);
 
   return (
-    <div style={{ height: "1380vh", position: "relative" }}>
+    <div style={{ height: "1460vh", position: "relative" }}>
       <VideoScroll
         onLoad={(props) =>
           setStyles(props.wrapperEl, props.videoEl, props.playbackRate)
@@ -42,7 +42,7 @@ const RC4 = () => {
           }}
           playsInline
         >
-          <source type="video/mp4" src="./RimacWeb.mp4" />
+          <source type="video/mp4" src="./RimacMC30fps.mp4" />
         </video>
       </VideoScroll>
     </div>
