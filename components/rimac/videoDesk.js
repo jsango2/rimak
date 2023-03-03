@@ -32,6 +32,7 @@ const RimacDesk = () => {
           tabIndex="0"
           autobuffer="autobuffer"
           preload="auto"
+          muted
           //   style={{ width: "100%", objectFit: "contain" }}
           style={{
             position: "fixed",
