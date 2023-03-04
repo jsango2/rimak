@@ -24,7 +24,7 @@ const RimacMobile = () => {
         onLoad={(props) =>
           setStyles(props.wrapperEl, props.videoEl, props.playbackRate)
         }
-        playbackRate={45}
+        playbackRate={15}
         style={{ position: "sticky" }}
       >
         <video
