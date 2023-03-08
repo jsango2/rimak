@@ -1,6 +1,25 @@
 import React, { useEffect, useState, useRef } from "react";
 import dynamic from "next/dynamic";
 import usewindowsize from "../components/helper/usewindowsize";
+import animacija from "../components/rimac/rimacLottie/animacija";
+import animacijaJson from "../components/rimac/rimacLottie/jsonRimac.json";
+import AnimacijaIkona from "../components/rimac/rimacLottie/animacijaIkona";
+import Lottie, { useLottie } from "lottie-react";
+import styled from "styled-components";
+
+const Body = styled.div`
+  position: relative;
+  height: 1000vh;
+  left: 0;
+`;
+
+const Wrap = styled.div`
+  position: fixed;
+  width: 500px;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, 0);
+`;
 
 const Rimac = dynamic(() => import("../components/rimac/videoDesk"), {
   ssr: false,
@@ -8,8 +27,40 @@ const Rimac = dynamic(() => import("../components/rimac/videoDesk"), {
 const RimacMobile = dynamic(() => import("../components/rimac/videoMobile"), {
   ssr: false,
 });
-
+const style = {
+  position: "sticky",
+  top: "0",
+  height: "400px",
+};
+const interactivity = {
+  mode: "scroll",
+  actions: [
+    {
+      visibility: [0.4, 0.6],
+      type: "seek",
+      frames: [0, 725],
+    },
+  ],
+};
 export default function Index() {
   const size = usewindowsize();
-  return <div>{size.width < 600 ? <RimacMobile /> : <Rimac />}</div>;
+  return (
+    <>
+      {size.width < 600 ? (
+        <>
+          <Body>
+            <Wrap>
+              <Lottie
+                animationData={animacijaJson}
+                interactivity={interactivity}
+                style={style}
+              />
+            </Wrap>
+          </Body>
+        </>
+      ) : (
+        <Rimac />
+      )}
+    </>
+  );
 }
