@@ -54,7 +54,7 @@ const LottieControl = () => {
             height: "100vh",
             width: "100vw",
             display: "flex",
-            touchAction: "true",
+            touchAction: "auto",
             left: "0",
           }}
           ref={lottieRef}
