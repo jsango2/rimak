@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import lottie from "lottie-web";
-import animationData from "../components/rimac/rimacLottie/jsonRimac.json";
+import animationData from "../components/rimac/rimacLottie/jsonRimac2.json";
 
 import { animated } from "@react-spring/web";
 

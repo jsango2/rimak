@@ -21,12 +21,12 @@ const Wrap = styled.div`
   transform: translate(-50%, 0);
 `;
 
-const Rimac = dynamic(() => import("../components/rimac/videoDesk"), {
-  ssr: false,
-});
-const RimacMobile = dynamic(() => import("../components/rimac/videoMobile"), {
-  ssr: false,
-});
+// const Rimac = dynamic(() => import("../components/rimac/videoDesk"), {
+//   ssr: false,
+// });
+// const RimacMobile = dynamic(() => import("../components/rimac/videoMobile"), {
+//   ssr: false,
+// });
 const style = {
   position: "sticky",
   top: "0",
@@ -59,7 +59,7 @@ export default function Index() {
           </Body>
         </>
       ) : (
-        <Rimac />
+        <div>jure</div>
       )}
     </>
   );
